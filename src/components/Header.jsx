@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <Image alt="" />
+        {/* <Image alt="" /> */}
         <h1>title!</h1>
 
         <NavBar />
