@@ -15,6 +15,7 @@ export default async function NewPost() {
       [title, author, image, content],
     );
     revalidatePath(`/posts`);
+    redirect(`/posts`);
   }
 
   return (

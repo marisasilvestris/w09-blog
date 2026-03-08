@@ -7,7 +7,7 @@ export default async function Post({ post }) {
       key={`${post.id}`}
       className="post p-4 border-green-500 flex flex-col gap-2 w-full"
     >
-      <Link href={`/posts/${post.id}`} className="postTop">
+      <Link href={`/posts/${post.id}`} className="postTop flex flex-col gap-2">
         {post.image ? (
           <div className="relative h-64">
             <Image
@@ -22,7 +22,7 @@ export default async function Post({ post }) {
         )}
         <h3 className="postTitle text-2xl">{`${post.title}`}</h3>
       </Link>
-      <div className="postAuthor p-2">{`${post.author}`}</div>
+      <div className="postAuthor">{`${post.author}`}</div>
       <div className="postContent whitespace-pre-wrap my-4">{`${post.content}`}</div>
       <div className="postTime text-xs">{`${post.created_at}`}</div>
     </li>

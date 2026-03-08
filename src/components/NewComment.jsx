@@ -1,6 +1,8 @@
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import pg from "pg";
 
-export default function NewComment({ id }) {
+export default async function NewComment({ id }) {
   async function submitPost(formData) {
     "use server";
 
@@ -12,13 +14,15 @@ export default function NewComment({ id }) {
       `insert into comments (post_id, author, content, created_at) values ($1, $2, $3, now())`,
       [id, author, content],
     );
+    revalidatePath(`/posts`);
+    redirect(`/posts/${id}`);
   }
 
   return (
     <>
       <form
         action={submitPost}
-        className="newCommentForm flex flex-col p-4 bg-cyan-600"
+        className="newCommentForm flex flex-col p-4 gap-4 bg-midtone text-primary"
       >
         <div className="newCommentAuthor flex flex-row gap-4">
           <label htmlFor="author">name</label>
@@ -39,9 +43,7 @@ export default function NewComment({ id }) {
             className="border border-orange-200 focus:text-black"
           />
         </div>
-        <button className="newCommentButton w-fit border-black bg-emerald-200 rounded-md overflow-hidden">
-          bark bark
-        </button>
+        <button className="newCommentButton p-2 bg-accent">bark bark</button>
       </form>
     </>
   );
