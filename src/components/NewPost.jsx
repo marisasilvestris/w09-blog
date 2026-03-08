@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { Tilt_Neon } from "next/font/google";
 import { redirect } from "next/navigation";
 import pg from "pg";
@@ -13,6 +14,7 @@ export default async function NewPost() {
       `insert into posts (title, author, image, content, created_at) values ($1, $2, $3, $4, now()) returning id`,
       [title, author, image, content],
     );
+    revalidatePath(`/posts`);
   }
 
   return (
