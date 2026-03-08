@@ -1,6 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Image from "next/image";
 import NewPost from "@/components/NewPost";
 
 export default async function Home() {

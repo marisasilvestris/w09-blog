@@ -1,8 +1,9 @@
+import NewPost from "@/components/NewPost";
+
 export default function Page() {
   return (
     <>
-      <div>test</div>
-      <div>test</div>
+      <NewPost />
     </>
   );
 }
