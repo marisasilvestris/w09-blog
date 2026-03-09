@@ -22,7 +22,7 @@ export default async function NewComment({ id }) {
     <>
       <form
         action={submitPost}
-        className="newCommentForm flex flex-col p-4 gap-4 bg-midtone text-primary"
+        className="newCommentForm flex flex-col p-4 gap-4 bg-midtone"
       >
         <div className="newCommentAuthor flex flex-row gap-4">
           <label htmlFor="author">name</label>
@@ -30,7 +30,7 @@ export default async function NewComment({ id }) {
             type="text"
             name="author"
             placeholder={`name here pls`}
-            className="border border-lime-300 grow"
+            className="border border-primary grow px-2"
           />
         </div>
         <div className="newCommentContent flex flex-col">
@@ -40,10 +40,12 @@ export default async function NewComment({ id }) {
           <textarea
             name="content"
             placeholder={`text content here`}
-            className="border border-orange-200 focus:text-black"
+            className="border border-primary px-2"
           />
         </div>
-        <button className="newCommentButton p-2 bg-accent">bark bark</button>
+        <button className="newCommentButton p-2 bg-accent text-secondary dark:text-primary">
+          bark bark
+        </button>
       </form>
     </>
   );

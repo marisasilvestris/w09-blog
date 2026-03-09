@@ -1,7 +1,37 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { localFont } from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+const lineSeed = localFont({
+  src: [
+    {
+      path: "../../public/LINESeedJP-Thin.ttf",
+      variable: "--font-lineseed-light",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../../public/LINESeedJP-Regular.ttf",
+      variable: "--font-lineseed-regular",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/LINESeedJP-Bold.ttf",
+      variable: "--font-lineseed-bold",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/LINESeedJP-ExtraBold.ttf",
+      variable: "--font-lineseed-extrabold",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +56,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lineSeed.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
         <div className="flex flex-col min-h-screen items-center justify-center font-sans">
-          <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 sm:items-start">
+          <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-8">
             {children}
           </main>
         </div>

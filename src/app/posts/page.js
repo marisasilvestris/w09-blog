@@ -9,7 +9,7 @@ export default async function Page() {
 
   return (
     <>
-      <ul className="w-full">
+      <ul className="w-full flex flex-col gap-4">
         {posts.length > 0
           ? posts.map((post) => {
               return <Post key={post.id} post={post} />;

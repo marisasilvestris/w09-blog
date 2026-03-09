@@ -14,7 +14,7 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <ul className="w-full">
+      <ul className="w-full gap-4 flex flex-col">
         {post ? (
           <>
             <Post post={post} />
