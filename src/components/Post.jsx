@@ -10,7 +10,7 @@ export default async function Post({ post }) {
     const db = new pg.Pool({ connectionString: process.env.DB_CONN });
     const deleteQuery = db.query(`delete from posts where id = $1`, [post.id]);
 
-    revalidatePath(`/posts/${post.id}`);
+    revalidatePath(`/posts`);
     redirect(`/posts`);
   }
   return (
