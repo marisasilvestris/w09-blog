@@ -8,9 +8,9 @@ export default function Header() {
       <header className="place-self-center">
         <Link
           href="/"
-          className="flex flex-row size-fit place-self-center text-6xl p-4"
+          className="flex flex-row place-self-center text-6xl p-4 hover:text-accent"
         >
-          <h1 className="font-bold">Blog Page</h1>
+          <h1 className="font-bold">cool blog for rad people</h1>
         </Link>
         <div className="flex flex-col w-fit place-self-center gap-2">
           <NavBar />

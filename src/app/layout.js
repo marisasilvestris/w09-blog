@@ -8,29 +8,27 @@ const lineSeed = localFont({
   src: [
     {
       path: "../../public/LINESeedJP-Thin.ttf",
-      variable: "--font-lineseed-light",
       weight: "100",
       style: "normal",
     },
     {
       path: "../../public/LINESeedJP-Regular.ttf",
-      variable: "--font-lineseed-regular",
       weight: "400",
       style: "normal",
     },
     {
       path: "../../public/LINESeedJP-Bold.ttf",
-      variable: "--font-lineseed-bold",
       weight: "700",
       style: "normal",
     },
     {
       path: "../../public/LINESeedJP-ExtraBold.ttf",
-      variable: "--font-lineseed-extrabold",
       weight: "800",
       style: "normal",
     },
   ],
+  variable: "--font-lineseed",
+  subsets: ["latin"],
 });
 
 const geistSans = Geist({
@@ -56,10 +54,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${lineSeed.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen items-center justify-between lowercase`}
+        className={`${lineSeed.variable} antialiased flex flex-col min-h-screen items-center justify-between lowercase`}
       >
         <Header />
-        <main className="flex w-full max-w-3xl flex-col py-8 px-16 grow">
+        <main className="flex w-full max-w-3xl flex-col p-8 grow">
           {children}
         </main>
         <Footer />

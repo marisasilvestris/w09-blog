@@ -67,7 +67,7 @@ export default async function NewPost() {
         <textarea
           name="content"
           placeholder={`text content here`}
-          className="field-sizing-content min-h-32 p-2"
+          className="field-sizing-content min-h-32 p-2 focus:border focus:border-accent"
           required
         />
       </div>
@@ -76,7 +76,7 @@ export default async function NewPost() {
         <span className="text-contrast">*</span> means required, ty (:
       </p>
 
-      <button className="newPostButton p-2 bg-accent text-secondary dark:text-primary">
+      <button className="newPostButton p-2 bg-accent text-primary">
         pupdate blog
       </button>
     </form>
