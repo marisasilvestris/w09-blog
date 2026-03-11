@@ -56,14 +56,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${lineSeed.variable} ${geistMono.variable} antialiased`}
+        className={`${lineSeed.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen items-center justify-between lowercase`}
       >
         <Header />
-        <div className="flex flex-col min-h-screen items-center justify-center font-sans">
-          <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-8">
-            {children}
-          </main>
-        </div>
+        <main className="flex w-full max-w-3xl flex-col py-8 px-16 grow">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

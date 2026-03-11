@@ -10,10 +10,11 @@ export default function Header() {
           href="/"
           className="flex flex-row size-fit place-self-center text-6xl p-4"
         >
-          <h1>Blog Page</h1>
+          <h1 className="font-bold">Blog Page</h1>
         </Link>
-
-        <NavBar />
+        <div className="flex flex-col w-fit place-self-center gap-2">
+          <NavBar />
+        </div>
       </header>
     </>
   );

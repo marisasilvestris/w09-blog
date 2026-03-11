@@ -8,14 +8,15 @@ export default async function Comments({ id }) {
 
   return (
     <>
-      <ul>
+      <ul className="flex flex-col gap-4">
         {comments.length > 0
           ? comments.map((comment) => {
-              console.log(comment.created_at);
-
               return (
-                <li key={comment.id} className="p-4 bg-secondary text-primary">
-                  <div className="commentTop">{comment.author}</div>
+                <li
+                  key={comment.id}
+                  className="p-4 bg-midtone text-secondary flex flex-col gap-2"
+                >
+                  <div className="commentTop text-accent">{comment.author}</div>
                   <div className="commentContent">{comment.content}</div>
                 </li>
               );

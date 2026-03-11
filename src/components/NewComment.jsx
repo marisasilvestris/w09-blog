@@ -22,28 +22,31 @@ export default async function NewComment({ id }) {
     <>
       <form
         action={submitPost}
-        className="newCommentForm flex flex-col p-4 gap-4 bg-midtone"
+        className="newCommentForm flex flex-col p-4 gap-2 w-full bg-midtone"
       >
-        <div className="newCommentAuthor flex flex-row gap-4">
-          <label htmlFor="author">name</label>
+        <div className="newCommentAuthor flex flex-row gap-4 justify-between">
+          <label htmlFor="author" className="place-self-center">
+            <span className="text-contrast">*</span> name
+          </label>
           <input
             type="text"
             name="author"
             placeholder={`name here pls`}
-            className="border border-primary grow px-2"
+            className="basis-[80%] p-1"
           />
         </div>
-        <div className="newCommentContent flex flex-col">
+        <div className="newCommentContent flex flex-col justify-between">
           <label htmlFor="content" className="">
-            spill ur heart out
+            <span className="text-contrast">*</span> spill ur heart out
           </label>
           <textarea
             name="content"
             placeholder={`text content here`}
-            className="border border-primary px-2"
+            className="field-sizing-content min-h-32 p-2"
+            required
           />
         </div>
-        <button className="newCommentButton p-2 bg-accent text-secondary dark:text-primary">
+        <button className="newCommentButton p-2 bg-accent text-primary">
           bark bark
         </button>
       </form>

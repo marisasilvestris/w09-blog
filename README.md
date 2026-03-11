@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# w09-blog
 
-## Getting Started
+> emoji toolbox  
+> 🐈‍⬛🟢🟠🔴
 
-First, run the development server:
+## Requirements checklist
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🟢 Display all posts on the page, with an option to sort them in ascending or descending order.  
+🟢 Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key.  
+🟢 Create a delete button on posts that allows users to delete the post from the database.  
+🟢 Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.  
+🟢 Allow users to comment on individual posts in their dynamic routes. Comments should be associated with posts, and have a dynamic route (e.g. /posts/:postid).  
+🟢 Add a redirect when a user creates a post to redirect them to the posts page.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Stretch requirements
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🔴 Implement a select input (or similar mechanism) that allows users to categorise posts during creation, storing them in their own table in the database. Ensure appropriate routing for categories, with endpoints such as /categories and /categories/:id to enable users to browse and interact with posts by category.  
+🔴 Create an edit functionality accessible via /posts/:id/edit, which pre-fills a form for post data. Create a working PUT route to update the post in the database.  
+🔴 Develop an edit comment feature accessible via /posts/:id/comments/:id/edit, which pre-fills a form for comment data. Create a working PUT route to update the comment in the database.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Reflection
 
-## Learn More
+> tl;dr doing better
 
-To learn more about Next.js, take a look at the following resources:
+submitting this late again because i'm all about delivering over time and under expectation, baybeeeeee.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+jokes aside, i actually got on pretty well with this one but decided to take it easier for a change. no unfunny gags or easter eggs in this one, although i was quite pleased with the light/dark mode additions. in fact, i was having such fun with this one that over this previous few days i cloned it and made a version with some clerk functionality stuffed in. will that end up serving as the base for this following week's project? hell naw, you know i'm doing it all from scratch again to prove a point to myself.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+i still think i struggle immensely with even the most elementary of database interactions, but i'm getting a better idea of using react. i could do well to make better use of components and utility functions, a thing i want to do for next week's project.
 
-## Deploy on Vercel
+i think the biggest thing i have learned over this particular project is that it's okay to take it easy. don't always gotta be so Extra~~~
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+marisa 🐈‍⬛

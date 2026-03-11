@@ -14,10 +14,14 @@ export default async function Post({ post }) {
     redirect(`/posts`);
   }
   return (
-    <li key={`${post.id}`} className="post flex flex-col gap-2 w-full">
-      <Link href={`/posts/${post.id}`} className="postTop flex flex-col gap-2">
+    <li key={`${post.id}`} className="post flex flex-col gap-4 w-full">
+      <Link
+        href={`/posts/${post.id}`}
+        className="postTop flex flex-col gap-4 hover:text-accent"
+      >
+        <h3 className="postTitle text-3xl border-b-4 border-accent">{`${post.title}`}</h3>
         {post.image ? (
-          <div className="relative h-64">
+          <div className="relative min-h-86">
             <Image
               src={`${post.image}`}
               fill={true}
@@ -25,18 +29,16 @@ export default async function Post({ post }) {
               alt=""
             />
           </div>
-        ) : (
-          <div className="bg-accent w-full min-h-56"></div>
-        )}
-        <h3 className="postTitle text-3xl">{`${post.title}`}</h3>
+        ) : null}
       </Link>
       <div className="postBody">
-        <div className="postAuthor text-contrast">{`${post.author}`}</div>
-        <div className="postContent whitespace-pre-wrap my-4 text-xl">{`${post.content}`}</div>
-        <div className="postTime text-xs">{`${post.created_at}`}</div>
+        <div className="postAuthor text-accent mx-4">{`${post.author}`}</div>
+        <div className="postContent whitespace-pre-wrap m-4 text-xl">{`${post.content}`}</div>
+        <div className="postTime text-accent text-xs">{`${post.created_at}`}</div>{" "}
+        {/* i was gonna take connor's advice from last project but i kind of like the stark info of the default output on this design */}
       </div>
       <button
-        className="postDelete bg-contrast w-fit text-primary dark:text-secondary py-2 px-4"
+        className="postDelete bg-contrast text-xs text-primary dark:text-secondary p-2 px-4 w-fit"
         onClick={deletePost}
       >
         bad post?

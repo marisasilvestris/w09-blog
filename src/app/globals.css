@@ -4,8 +4,12 @@
   --primary: #e1e1e1;
   --midtone: #c9c9c9;
   --secondary: #303030;
-  --accent: #ffdf20;
-  --contrast: #ff0000;
+  --accent: #2da86f;
+  --contrast: #b30000;
+}
+:root::selection {
+  color: var(--secondary);
+  background-color: var(--color-accent);
 }
 * {
   box-sizing: border-box;
@@ -15,7 +19,6 @@ body {
   color: var(--secondary);
   font-family: Arial, Helvetica, sans-serif;
 }
-
 @theme inline {
   --color-primary: var(--primary);
   --color-midtone: var(--midtone);
@@ -31,29 +34,10 @@ body {
     --primary: #303030;
     --midtone: #818181;
     --secondary: #e1e1e1;
+    --accent: #ffdf20;
+    --contrast: #ff0000;
   }
-}
-
-.line-seed-jp-thin {
-  font-family: "LINE Seed JP", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.line-seed-jp-regular {
-  font-family: "LINE Seed JP", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.line-seed-jp-bold {
-  font-family: "LINE Seed JP", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.line-seed-jp-extrabold {
-  font-family: "LINE Seed JP", sans-serif;
-  font-weight: 800;
-  font-style: normal;
+  :root::selection {
+    color: var(--primary);
+  }
 }
