@@ -75,7 +75,7 @@ export default async function NewPost() {
         <span className="text-contrast">*</span> means required, ty (:
       </p>
 
-      <button className="newPostButton p-2 bg-accent text-primary hover:bg-primary hover:text-secondary dark:hover:text-secondary">
+      <button className="newPostButton p-2 bg-accent text-primary hover:bg-primary hover:text-secondary dark:hover:text-secondary active:bg-contrast">
         pupdate blog
       </button>
     </form>

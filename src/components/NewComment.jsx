@@ -46,7 +46,12 @@ export default async function NewComment({ id }) {
             required
           />
         </div>
-        <button className="newCommentButton p-2 bg-accent text-primary hover:bg-primary hover:text-secondary dark:hover:text-secondary">
+
+        <p>
+          <span className="text-contrast">*</span> means required, ty (:
+        </p>
+
+        <button className="newCommentButton p-2 bg-accent text-primary hover:bg-primary hover:text-secondary dark:hover:text-secondary active:bg-contrast">
           bark bark
         </button>
       </form>
