@@ -8,7 +8,7 @@ export default function Header() {
       <header className="place-self-center">
         <Link
           href="/"
-          className="flex flex-row place-self-center text-6xl p-4 hover:text-accent"
+          className="flex flex-row place-self-center text-6xl px-8 text-center pt-4 pb-8 hover:text-accent"
         >
           <h1 className="font-bold">cool blog inc. 🐾</h1>
         </Link>

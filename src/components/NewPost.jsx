@@ -1,5 +1,4 @@
 import { revalidatePath } from "next/cache";
-import { Tilt_Neon } from "next/font/google";
 import { redirect } from "next/navigation";
 import pg from "pg";
 

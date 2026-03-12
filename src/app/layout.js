@@ -28,7 +28,6 @@ const lineSeed = localFont({
     },
   ],
   variable: "--font-lineseed",
-  subsets: ["latin"],
 });
 
 const geistSans = Geist({
@@ -54,7 +53,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${lineSeed.variable} antialiased flex flex-col min-h-screen items-center justify-between lowercase`}
+        className={`antialiased flex flex-col min-h-screen items-center justify-between lowercase`}
       >
         <Header />
         <main className="flex w-full max-w-3xl flex-col p-8 grow">

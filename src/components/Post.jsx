@@ -19,7 +19,7 @@ export default async function Post({ post }) {
         href={`/posts/${post.id}`}
         className="postTop flex flex-col gap-4 hover:text-accent"
       >
-        <h3 className="postTitle text-3xl border-b-4 border-accent">{`${post.title}`}</h3>
+        <h3 className="postTitle text-3xl border-b-4 border-accent font-medium">{`${post.title}`}</h3>
         {post.image ? (
           <div className="postImageContainer relative min-h-86">
             <Image
