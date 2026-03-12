@@ -25,27 +25,27 @@ export default async function NewPost() {
     >
       <h2 className="place-self-center text-3xl">new post!</h2>
 
-      <div className="newPostTitle flex flex-row gap-4 justify-between">
-        <label htmlFor="title" className="place-self-center shrink-0">
+      <div className="newPostTitle flex flex-row gap-4 w-full justify-between">
+        <label htmlFor="title" className="place-self-center w-20">
           <span className="text-contrast">*</span> title
         </label>
         <input
           type="text"
           name="title"
           placeholder={`title here`}
-          className="basis-[80%] shrink p-1"
+          className="w-full p-1"
           required
         />
       </div>
       <div className="newPostAuthor flex flex-row gap-4 justify-between">
-        <label htmlFor="author" className="place-self-center shrink-0">
+        <label htmlFor="author" className="place-self-center w-20">
           <span className="text-contrast">*</span> name
         </label>
         <input
           type="text"
           name="author"
           placeholder={`name here pls`}
-          className="basis-[80%] shrink p-1"
+          className="w-full p-1"
           required
         />
       </div>
@@ -59,7 +59,7 @@ export default async function NewPost() {
         <textarea
           name="content"
           placeholder={`text content here`}
-          className="field-sizing-content min-h-32 p-2 shrink focus:border focus:border-accent"
+          className="field-sizing-content min-h-32 p-2 w-full focus:border focus:border-accent"
           required
         />
       </div>

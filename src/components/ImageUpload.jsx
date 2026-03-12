@@ -35,7 +35,7 @@ export default function ImageUpload() {
   }
   return (
     <>
-      <label htmlFor="image" className="place-self-center shrink-0">
+      <label htmlFor="image" className="place-self-center w-20">
         img url
       </label>
       {isImage === false ? (
@@ -47,7 +47,7 @@ export default function ImageUpload() {
         type="text"
         name="image"
         placeholder="url here pls"
-        className={`basis-[80%] p-1 ${isImage === false ? "border-2 border-contrast shrink" : null}`}
+        className={`w-full p-1 ${isImage === false ? "border-2 border-contrast shrink" : null}`}
         onBlur={(event) => {
           isUriImage(event.target.value) == true
             ? setIsImage(true)

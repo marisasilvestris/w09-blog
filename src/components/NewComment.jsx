@@ -25,14 +25,14 @@ export default async function NewComment({ id }) {
         className="newCommentForm flex flex-col p-4 gap-2 w-full bg-midtone"
       >
         <div className="newCommentAuthor flex flex-row gap-4 justify-between">
-          <label htmlFor="author" className="place-self-center">
+          <label htmlFor="author" className="place-self-center shrink-0">
             <span className="text-contrast">*</span> name
           </label>
           <input
             type="text"
             name="author"
             placeholder={`name here pls`}
-            className="basis-[80%] shrink p-1"
+            className="w-full p-1"
           />
         </div>
         <div className="newCommentContent flex flex-col justify-between">
@@ -42,7 +42,7 @@ export default async function NewComment({ id }) {
           <textarea
             name="content"
             placeholder={`text content here`}
-            className="field-sizing-content shrink min-h-32 p-2"
+            className="field-sizing-content w-full min-h-32 p-2"
             required
           />
         </div>
