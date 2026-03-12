@@ -27,6 +27,7 @@ export default async function Post({ post }) {
               fill={true}
               className="postImage object-cover"
               alt=""
+              loading="lazy"
             />
           </div>
         ) : null}
