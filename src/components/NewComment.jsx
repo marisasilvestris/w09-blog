@@ -32,7 +32,7 @@ export default async function NewComment({ id }) {
             type="text"
             name="author"
             placeholder={`name here pls`}
-            className="basis-[80%] p-1"
+            className="basis-[80%] shrink p-1"
           />
         </div>
         <div className="newCommentContent flex flex-col justify-between">
@@ -42,7 +42,7 @@ export default async function NewComment({ id }) {
           <textarea
             name="content"
             placeholder={`text content here`}
-            className="field-sizing-content min-h-32 p-2"
+            className="field-sizing-content shrink min-h-32 p-2"
             required
           />
         </div>

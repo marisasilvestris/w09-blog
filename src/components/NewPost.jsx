@@ -33,7 +33,7 @@ export default async function NewPost() {
           type="text"
           name="title"
           placeholder={`title here`}
-          className="basis-[80%] p-1"
+          className="basis-[80%] shrink p-1"
           required
         />
       </div>
@@ -45,7 +45,7 @@ export default async function NewPost() {
           type="text"
           name="author"
           placeholder={`name here pls`}
-          className="basis-[80%] p-1"
+          className="basis-[80%] shrink p-1"
           required
         />
       </div>
@@ -59,7 +59,7 @@ export default async function NewPost() {
         <textarea
           name="content"
           placeholder={`text content here`}
-          className="field-sizing-content min-h-32 p-2 focus:border focus:border-accent"
+          className="field-sizing-content min-h-32 p-2 shrink focus:border focus:border-accent"
           required
         />
       </div>
