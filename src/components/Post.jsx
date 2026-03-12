@@ -38,7 +38,7 @@ export default async function Post({ post }) {
         {/* i should have taken connor's advice from last project but i kind of like the stark info of the default output on this design */}
       </div>
       <button
-        className="postDelete bg-contrast text-xs text-primary dark:text-secondary p-2 px-4 w-fit hover:bg-accent"
+        className="postDelete bg-contrast text-xs text-primary dark:text-secondary p-2 px-4 w-fit hover:bg-accent dark:hover:text-primary"
         onClick={deletePost}
       >
         bad post?

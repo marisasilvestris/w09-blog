@@ -46,7 +46,7 @@ export default async function NewComment({ id }) {
             required
           />
         </div>
-        <button className="newCommentButton p-2 bg-accent text-primary">
+        <button className="newCommentButton p-2 bg-accent text-primary hover:bg-primary hover:text-secondary dark:hover:text-secondary">
           bark bark
         </button>
       </form>

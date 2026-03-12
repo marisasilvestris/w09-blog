@@ -10,7 +10,7 @@ export default function Header() {
           href="/"
           className="flex flex-row place-self-center text-6xl p-4 hover:text-accent"
         >
-          <h1 className="font-bold">cool blog for rad people</h1>
+          <h1 className="font-bold">cool blog inc. 🐾</h1>
         </Link>
         <div className="flex flex-col w-fit place-self-center gap-2">
           <NavBar />
