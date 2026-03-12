@@ -10,7 +10,7 @@ export default async function NewComment({ id }) {
 
     const db = new pg.Pool({ connectionString: process.env.DB_CONN });
 
-    const newComment = db.query(
+    const newComment = await db.query(
       `insert into comments (post_id, author, content, created_at) values ($1, $2, $3, now())`,
       [id, author, content],
     );
@@ -33,6 +33,7 @@ export default async function NewComment({ id }) {
             name="author"
             placeholder={`name here pls`}
             className="w-full p-1"
+            required
           />
         </div>
         <div className="newCommentContent flex flex-col justify-between">

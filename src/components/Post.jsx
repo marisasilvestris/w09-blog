@@ -8,7 +8,9 @@ export default async function Post({ post }) {
   async function deletePost() {
     "use server";
     const db = new pg.Pool({ connectionString: process.env.DB_CONN });
-    const deleteQuery = db.query(`delete from posts where id = $1`, [post.id]);
+    const deleteQuery = await db.query(`delete from posts where id = $1`, [
+      post.id,
+    ]);
 
     revalidatePath(`/posts`);
     redirect(`/posts`);
@@ -37,12 +39,14 @@ export default async function Post({ post }) {
         <div className="postContent whitespace-pre-wrap m-4 text-xl">{`${post.content}`}</div>
         <div className="postTime text-accent text-xs">{`${post.created_at.toLocaleDateString()} ${post.created_at.toLocaleTimeString()}`}</div>
       </div>
-      <button
-        className="postDelete bg-contrast text-xs text-primary dark:text-secondary p-2 px-4 w-fit hover:bg-accent dark:hover:text-primary active:bg-contrast"
-        onClick={deletePost}
-      >
-        bad post?
-      </button>
+      <form action={deletePost}>
+        <button
+          type="submit"
+          className="postDelete bg-contrast text-xs text-primary dark:text-secondary p-2 px-4 w-fit hover:bg-accent dark:hover:text-primary active:bg-contrast"
+        >
+          bad post?
+        </button>
+      </form>
     </li>
   );
 }

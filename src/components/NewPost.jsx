@@ -10,7 +10,7 @@ export default async function NewPost() {
     const { title, author, image, content } = Object.fromEntries(formData);
 
     const db = new pg.Pool({ connectionString: process.env.DB_CONN });
-    const newPost = db.query(
+    const newPost = await db.query(
       `insert into posts (title, author, image, content, created_at) values ($1, $2, $3, $4, now()) returning id`,
       [title, author, image, content],
     );
