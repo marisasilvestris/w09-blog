@@ -34,8 +34,7 @@ export default async function Post({ post }) {
       <div className="postBody">
         <div className="postAuthor text-accent mx-4">{`${post.author}`}</div>
         <div className="postContent whitespace-pre-wrap m-4 text-xl">{`${post.content}`}</div>
-        <div className="postTime text-accent text-xs">{`${post.created_at}`}</div>{" "}
-        {/* i should have taken connor's advice from last project but i kind of like the stark info of the default output on this design */}
+        <div className="postTime text-accent text-xs">{`${post.created_at.toLocaleDateString()} ${post.created_at.toLocaleTimeString()}`}</div>
       </div>
       <button
         className="postDelete bg-contrast text-xs text-primary dark:text-secondary p-2 px-4 w-fit hover:bg-accent dark:hover:text-primary active:bg-contrast"

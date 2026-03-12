@@ -1,6 +1,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import pg from "pg";
+import ImageUpload from "./ImageUpload";
 
 export default async function NewPost() {
   async function submitPost(formData) {
@@ -25,7 +26,7 @@ export default async function NewPost() {
       <h2 className="place-self-center text-3xl">new post!</h2>
 
       <div className="newPostTitle flex flex-row gap-4 justify-between">
-        <label htmlFor="title" className="place-self-center">
+        <label htmlFor="title" className="place-self-center shrink-0">
           <span className="text-contrast">*</span> title
         </label>
         <input
@@ -37,7 +38,7 @@ export default async function NewPost() {
         />
       </div>
       <div className="newPostAuthor flex flex-row gap-4 justify-between">
-        <label htmlFor="author" className="place-self-center">
+        <label htmlFor="author" className="place-self-center shrink-0">
           <span className="text-contrast">*</span> name
         </label>
         <input
@@ -49,18 +50,10 @@ export default async function NewPost() {
         />
       </div>
       <div className="newPostImage flex flex-row gap-4 justify-between">
-        <label htmlFor="image" className="place-self-center">
-          img url
-        </label>
-        <input
-          type="text"
-          name="image"
-          placeholder="url here pls"
-          className="basis-[80%] p-1"
-        />
+        <ImageUpload />
       </div>
       <div className="newPostContent flex flex-col">
-        <label htmlFor="content" className="py-1">
+        <label htmlFor="content" className="py-1 shrink-0">
           <span className="text-contrast">*</span> spill ur heart out
         </label>
         <textarea
