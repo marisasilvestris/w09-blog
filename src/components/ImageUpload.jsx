@@ -27,9 +27,11 @@ export default function ImageUpload() {
       "apng",
     ];
     //check if the extension matches anything in the list.
-    if (imageTypes.indexOf(extension) !== -1) {
+
+    if ((imageTypes.indexOf(extension) !== -1) | (uri == "")) {
       return true;
     }
+    console.log(uri);
   }
   return (
     <>

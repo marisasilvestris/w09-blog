@@ -8,7 +8,7 @@
   --contrast: #b30000;
 }
 :root::selection {
-  color: var(--secondary);
+  color: var(--primary);
   background-color: var(--color-accent);
 }
 * {
@@ -42,8 +42,5 @@ a {
     --secondary: #e1e1e1;
     --accent: #ffdf20;
     --contrast: #ff0000;
-  }
-  :root::selection {
-    color: var(--primary);
   }
 }
