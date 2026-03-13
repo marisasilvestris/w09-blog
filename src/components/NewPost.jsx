@@ -11,7 +11,7 @@ export default async function NewPost() {
 
     const db = new pg.Pool({ connectionString: process.env.DB_CONN });
     const newPost = await db.query(
-      `insert into posts (title, author, image, content, created_at) values ($1, $2, $3, $4, now()) returning id`,
+      `insert into blogposts (title, author, image, content, created_at) values ($1, $2, $3, $4, now()) returning id`,
       [title, author, image, content],
     );
     revalidatePath(`/posts`);

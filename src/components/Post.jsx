@@ -8,7 +8,7 @@ export default async function Post({ post }) {
   async function deletePost() {
     "use server";
     const db = new pg.Pool({ connectionString: process.env.DB_CONN });
-    const deleteQuery = await db.query(`delete from posts where id = $1`, [
+    const deleteQuery = await db.query(`delete from blogposts where id = $1`, [
       post.id,
     ]);
 

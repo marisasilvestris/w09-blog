@@ -9,7 +9,7 @@ export default async function Page({ params }) {
   const { id } = await params;
 
   const db = new pg.Pool({ connectionString: process.env.DB_CONN });
-  const post = (await db.query(`select * from posts where id = $1`, [id]))
+  const post = (await db.query(`select * from blogposts where id = $1`, [id]))
     .rows[0];
 
   return (

@@ -11,7 +11,7 @@ export default async function NewComment({ id }) {
     const db = new pg.Pool({ connectionString: process.env.DB_CONN });
 
     const newComment = await db.query(
-      `insert into comments (post_id, author, content, created_at) values ($1, $2, $3, now())`,
+      `insert into blogcomments (post_id, author, content, created_at) values ($1, $2, $3, now())`,
       [id, author, content],
     );
     revalidatePath(`/posts`);

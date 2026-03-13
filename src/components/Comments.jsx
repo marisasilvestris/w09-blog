@@ -3,7 +3,7 @@ import pg from "pg";
 export default async function Comments({ id }) {
   const db = new pg.Pool({ connectionString: process.env.DB_CONN });
   const comments = (
-    await db.query(`select * from comments where post_id = $1`, [id])
+    await db.query(`select * from blogcomments where post_id = $1`, [id])
   ).rows;
 
   return (

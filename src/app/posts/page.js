@@ -5,8 +5,9 @@ import pg from "pg";
 
 export default async function Page({ searchParams }) {
   const db = new pg.Pool({ connectionString: process.env.DB_CONN });
-  const posts = (await db.query(`select * from posts order by created_at desc`))
-    .rows;
+  const posts = (
+    await db.query(`select * from blogposts order by created_at desc`)
+  ).rows;
 
   const params = await searchParams;
   if (params.sort === "asc") {
